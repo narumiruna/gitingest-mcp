@@ -1,0 +1,60 @@
+[project]
+name = "mcpservertemplate"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = [{ name = "narumi", email = "toucans-cutouts0f@icloud.com" }]
+requires-python = ">=3.12"
+dependencies = ["loguru>=0.7.3", "mcp[cli]>=1.6.0"]
+
+[project.scripts]
+mcpservertemplate = "mcpservertemplate.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13.0",
+    "pip>=25.0.1",
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.7.3",
+]
+
+[tool.ruff]
+exclude = ["build"]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "B",   # flake8-bugbear
+    "C",   # flake8-comprehensions
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "SIM", # flake8-simplify
+    "UP",  # pyupgrade
+    "W",   # pycodestyle warnings
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.bumpversion]
+current_version = "0.1.0"
+tag = true
+commit = true
+pre_commit_hooks = ["uv lock", "git add uv.lock"]
