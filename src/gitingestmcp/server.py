@@ -34,7 +34,6 @@ async def ingest_git(
         Field(description="Pattern or set of patterns specifying which files to exclude, e.q. '*.md, src/'"),
     ] = "",
     branch: Annotated[str, Field(description="The branch to clone and ingest.")] = "main",
-    return_content: Annotated[bool, Field(description="Whether to return the content of the files.")] = False,
 ) -> str:
     """
     This function analyzes a source (URL or local path), clones the corresponding repository (if applicable),
@@ -49,9 +48,13 @@ async def ingest_git(
         branch=branch,
     )
 
-    if return_content:
-        return content
-    return f"summary: {summary}\ntree: {tree}"
+    return "\n\n".join(
+        [
+            summary,
+            tree,
+            content,
+        ]
+    )
 
 
 def main() -> None:
