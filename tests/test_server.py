@@ -6,7 +6,7 @@ from mcp import stdio_client
 
 @pytest.fixture
 def server_params() -> StdioServerParameters:
-    return StdioServerParameters(command="uv", args=["run", "gitintestmcp"])
+    return StdioServerParameters(command="uv", args=["run", "gitingestmcp"])
 
 
 @pytest.mark.asyncio
