@@ -1,6 +1,6 @@
 [project]
 name = "gitingestmcp"
-version = "0.1.2"
+version = "0.1.3"
 description = ""
 readme = "README.md"
 authors = [{ name = "narumi", email = "toucans-cutouts0f@icloud.com" }]
@@ -54,7 +54,7 @@ filterwarnings = ["ignore::DeprecationWarning"]
 ignore_missing_imports = true
 
 [tool.bumpversion]
-current_version = "0.1.2"
+current_version = "0.1.3"
 tag = true
 commit = true
 pre_commit_hooks = ["uv lock", "git add uv.lock"]
