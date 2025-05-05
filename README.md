@@ -32,7 +32,7 @@ Add the following configuration to your AI assistant's settings to enable giting
   "mcpServers": {
     "gitingestmcp": {
       "command": "uvx",
-      "args": ["gitingestmcp"]
+      "args": ["-U", "gitingestmcp"]
     }
   }
 }
