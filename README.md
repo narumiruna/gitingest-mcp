@@ -1,16 +1,16 @@
-# mcp-server-template
+# gitingest-mcp
 
 ### GitHub
 
 ```json
 {
   "mcpServers": {
-    "mcpservertemplate": {
+    "gitingestmcp": {
       "command": "uvx",
       "args": [
         "--from",
-        "git+https://github.com/narumiruna/mcp-server-template",
-        "mcpservertemplate"
+        "git+https://github.com/narumiruna/gitingest-mcp",
+        "gitingestmcp"
       ]
     }
   }
@@ -22,9 +22,9 @@
 ```json
 {
   "mcpServers": {
-    "mcpservertemplate": {
+    "gitingestmcp": {
       "command": "uvx",
-      "args": ["mcpservertemplate"]
+      "args": ["gitingestmcp"]
     }
   }
 }
@@ -35,13 +35,13 @@
 ```json
 {
   "mcpServers": {
-    "mcpservertemplate": {
+    "gitingestmcp": {
       "command": "uv",
       "args": [
         "run",
         "--directory",
-        "/home/<user>/workspace/mcp-server-template",
-        "mcpservertemplate"
+        "/home/<user>/workspace/gitingest-mcp",
+        "gitingestmcp"
       ]
     }
   }

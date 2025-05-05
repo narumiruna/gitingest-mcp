@@ -1,5 +1,5 @@
 [project]
-name = "mcpservertemplate"
+name = "gitingestmcp"
 version = "0.1.0"
 description = ""
 readme = "README.md"
@@ -8,7 +8,7 @@ requires-python = ">=3.12"
 dependencies = ["loguru>=0.7.3", "mcp[cli]>=1.6.0"]
 
 [project.scripts]
-mcpservertemplate = "mcpservertemplate.server:main"
+gitingestmcp = "gitingestmcp.server:main"
 
 [build-system]
 requires = ["hatchling"]
