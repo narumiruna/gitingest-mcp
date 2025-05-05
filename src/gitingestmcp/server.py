@@ -1,5 +1,4 @@
 from typing import Annotated
-from typing import Literal
 
 from gitingest import ingest_async
 from mcp.server.fastmcp import FastMCP

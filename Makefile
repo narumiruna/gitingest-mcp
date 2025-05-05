@@ -1,5 +1,5 @@
 lint:
-	uv run ruff check .
+	uv run ruff check --fix .
 
 type:
 	uv run mypy --install-types --non-interactive .
