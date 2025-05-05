@@ -29,11 +29,11 @@ async def ingest_git(
     include_patterns: Annotated[
         str,
         Field(description="Pattern or set of patterns specifying which files to include, e.q. '*.md, src/'"),
-    ] = "",
+    ] = "*.md",
     exclude_patterns: Annotated[
         str,
         Field(description="Pattern or set of patterns specifying which files to exclude, e.q. '*.md, src/'"),
-    ] = "",
+    ] = "src/",
     branch: Annotated[str, Field(description="The branch to clone and ingest.")] = "main",
     return_content: Annotated[bool, Field(description="Whether to return the content of the files.")] = False,
 ) -> str:
