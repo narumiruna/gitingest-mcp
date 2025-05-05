@@ -13,16 +13,6 @@ A Model Context Protocol (MCP) server implementation that integrates with [gitin
 - Support for filtering files by size, patterns, and branches
 - Returns comprehensive repository information including summaries, file structure, and content
 
-## Installation
-
-### Using pip/uv
-
-```bash
-pip install gitingestmcp
-# or with uv
-uv pip install gitingestmcp
-```
-
 ## Usage
 
 ### Configuration Options
