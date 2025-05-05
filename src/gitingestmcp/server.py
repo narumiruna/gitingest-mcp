@@ -1,11 +1,12 @@
 from typing import Annotated
+from typing import Literal
 
 from gitingest import ingest_async
 from mcp.server.fastmcp import FastMCP
 from pydantic import Field
 
 # https://github.com/jlowin/fastmcp/issues/81#issuecomment-2714245145
-mcp = FastMCP("MCP Server Template", log_level="ERROR")
+mcp = FastMCP("Gitingest MCP Server", log_level="ERROR")
 
 
 @mcp.tool()
@@ -34,11 +35,12 @@ async def ingest_git(
         Field(description="Pattern or set of patterns specifying which files to exclude, e.q. '*.md, src/'"),
     ] = "",
     branch: Annotated[str, Field(description="The branch to clone and ingest.")] = "main",
+    return_content: Annotated[bool, Field(description="Whether to return the content of the files.")] = False,
 ) -> str:
     """
     This function analyzes a source (URL or local path), clones the corresponding repository (if applicable),
     and processes its files according to the specified query parameters.
-    It returns a string that includes: a summary, a tree-like structure of the files, and the content of the files.
+    It can return a summary, a tree-like structure of the files, or the content of the files.
     """
     summary, tree, content = await ingest_async(
         source,
@@ -47,7 +49,10 @@ async def ingest_git(
         exclude_patterns=exclude_patterns,
         branch=branch,
     )
-    return "\n\n".join([summary, tree, content])
+
+    if return_content:
+        return content
+    return f"summary: {summary}\ntree: {tree}"
 
 
 def main() -> None:

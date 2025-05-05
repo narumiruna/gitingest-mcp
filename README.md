@@ -14,9 +14,9 @@ A Model Context Protocol (MCP) server implementation that integrates with [gitin
 ### Using pip/uv
 
 ```bash
-pip install gitingest-mcp
+pip install gitingestmcp
 # or with uv
-uv pip install gitingest-mcp
+uv pip install gitingestmcp
 ```
 
 ## Usage
