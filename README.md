@@ -1,4 +1,4 @@
-# gitingest-mcp
+# Gitingest MCP Server
 
 A Model Context Protocol (MCP) server implementation that integrates with [gitingest](https://github.com/cyclotruc/gitingest) for turning any Git repository into a simple text digest of its codebase.
 
