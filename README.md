@@ -25,6 +25,19 @@ uv pip install gitingest-mcp
 
 Add the following configuration to your AI assistant's settings to enable gitingest-mcp as an MCP server:
 
+#### PyPI Installation
+
+```json
+{
+  "mcpServers": {
+    "gitingestmcp": {
+      "command": "uvx",
+      "args": ["gitingestmcp"]
+    }
+  }
+}
+```
+
 #### GitHub Installation
 
 ```json
@@ -37,19 +50,6 @@ Add the following configuration to your AI assistant's settings to enable giting
         "git+https://github.com/narumiruna/gitingest-mcp",
         "gitingestmcp"
       ]
-    }
-  }
-}
-```
-
-#### PyPI Installation
-
-```json
-{
-  "mcpServers": {
-    "gitingestmcp": {
-      "command": "uvx",
-      "args": ["gitingestmcp"]
     }
   }
 }
