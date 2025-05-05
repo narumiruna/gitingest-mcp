@@ -1,6 +1,6 @@
 # gitingest-mcp
 
-A Model Context Protocol (MCP) server implementation that integrates with [gitingest](https://github.com/cyclotruc/gitingest) for Git repository analysis and ingestion. This server allows AI models to efficiently access and analyze code repositories through a standardized interface.
+A Model Context Protocol (MCP) server implementation that integrates with [gitingest](https://github.com/cyclotruc/gitingest) for turning any Git repository into a simple text digest of its codebase.
 
 ## Features
 
