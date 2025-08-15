@@ -2,6 +2,7 @@
 
 A Model Context Protocol (MCP) server implementation that integrates with [gitingest](https://github.com/cyclotruc/gitingest) for turning any Git repository into a simple text digest of its codebase.
 
+[![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/narumiruna/gitingest-mcp)](https://archestra.ai/mcp-catalog/narumiruna__gitingest-mcp)
 <a href="https://glama.ai/mcp/servers/@narumiruna/gitingest-mcp">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@narumiruna/gitingest-mcp/badge" alt="Gitingest Server MCP server" />
 </a>
