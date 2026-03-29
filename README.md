@@ -6,6 +6,10 @@ A Model Context Protocol (MCP) server implementation that integrates with [gitin
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@narumiruna/gitingest-mcp/badge" alt="Gitingest Server MCP server" />
 </a>
 
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/narumiruna-gitingest-mcp).
+
 ## Features
 
 - Easy integration with AI assistants through the Model Context Protocol
